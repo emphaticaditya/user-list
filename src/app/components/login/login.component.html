@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="login_container">
+        <div class="card">
+            <h5 class="card-header">Please login to see user data!</h5>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="email">Username</label>
+                    <input type="email" class="form-control" [(ngModel)]="userCredentials.accountId" id="email" (keyup.enter)="login()" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" [(ngModel)]="userCredentials.pswd" (keyup.enter)="login()" id="password" placeholder="Password">
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+                <button class="btn-primary" (click)="login()">Login</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- spinner -->
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+    <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+<!-- spinner -->

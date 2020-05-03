@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-md-4 col-xs-12" *ngFor="let user of userData" [hidden]="userData.length===0">
+        <div class="card card-edited">
+            <div class="card-header">
+                {{user.firstName}} {{user.lastName}}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Account Id: {{user.accountId}}</h5>
+                <p class="card-text">Age: {{user.age}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 no_data" [hidden]="userData.length!==0">
+        <span>No user matching given criteria!</span>
+    </div>
+</div>
